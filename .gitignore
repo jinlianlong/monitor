@@ -1,0 +1,27 @@
+HELP.md
+target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iml
+*.ipr
+*.log
+*.out
+*.gz
+*.pyc
+*.pyo
+
+### NetBeans ###
+build/
+
+### VS Code ###
+.vscode/

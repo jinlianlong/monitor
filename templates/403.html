@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+<style type="text/css">
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: -webkit-linear-gradient(#205081, #308dea);
+    background: -o-linear-gradient(#205081, #308dea);
+    background: linear-gradient(#205081, #308dea);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: default;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.index {
+    width: 50%;
+    margin: 10% auto;
+}
+
+.index p:first-child {
+    text-align: center;
+    font-family: cursive;
+    font-size: 150px;
+    font-weight: bold;
+    line-height: 100px;
+    letter-spacing: 5px;
+    color: #fff;
+}
+
+.foot {
+    text-align: center;
+    font-size: 16px;
+    line-height: 100px;
+    color: #fff;
+}
+
+.index p:first-child span {
+    cursor: pointer;
+    text-shadow: 0px 0px 2px #686868,
+        0px 1px 1px #ddd,
+        0px 2px 1px #d6d6d6,
+        0px 3px 1px #ccc,
+        0px 4px 1px #c5c5c5,
+        0px 5px 1px #c1c1c1,
+        0px 6px 1px #bbb,
+        0px 7px 1px #777,
+        0px 8px 3px rgba(100, 100, 100, 0.4),
+        0px 9px 5px rgba(100, 100, 100, 0.1),
+        0px 10px 7px rgba(100, 100, 100, 0.15),
+        0px 11px 9px rgba(100, 100, 100, 0.2),
+        0px 12px 11px rgba(100, 100, 100, 0.25),
+        0px 13px 15px rgba(100, 100, 100, 0.3);
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+.index p:first-child span:hover {
+    text-shadow: 0px 0px 2px #686868,
+        0px 1px 1px #fff,
+        0px 2px 1px #fff,
+        0px 3px 1px #fff,
+        0px 4px 1px #fff,
+        0px 5px 1px #fff,
+        0px 6px 1px #fff,
+        0px 7px 1px #777,
+        0px 8px 3px #fff,
+        0px 9px 5px #fff,
+        0px 10px 7px #fff,
+        0px 11px 9px #fff,
+        0px 12px 11px #fff,
+        0px 13px 15px #fff;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+.tip {
+    text-align: center;
+    color: #F8F8FF;
+    font-family: cursive;
+    font-size: 3vw;
+    text-shadow: 0 1px 0 #fff;
+    letter-spacing: 1px;
+    line-height: 2em;
+}
+
+.bee {
+    -webkit-animation: hover 2s ease-in-out infinite;
+    animation: hover 2s ease-in-out infinite;
+}
+
+.bee-body {
+    position: relative;
+    margin: 136px 130px 38px 130px;
+    min-width: 130px;
+    background: #ffca31;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background-size: 130px 65px, cover, cover, cover;
+    background-image: -webkit-linear-gradient(top, transparent 50%, #292929 50%), -webkit-radial-gradient(51% 36% circle, #ffd764 47%, rgba(0, 0, 0, 0) 47%), -webkit-radial-gradient(51% 53% circle, #ffd764 55%, rgba(0, 0, 0, 0) 55%), -webkit-radial-gradient(60% 53% circle, #ffebb1 60%, rgba(0, 0, 0, 0) 60%);
+    background-image: linear-gradient(to bottom, transparent 50%, #292929 50%), radial-gradient(circle at 51% 36%, #ffd764 47%, rgba(0, 0, 0, 0) 47%), radial-gradient(circle at 51% 53%, #ffd764 55%, rgba(0, 0, 0, 0) 55%), radial-gradient(circle at 60% 53%, #ffebb1 60%, rgba(0, 0, 0, 0) 60%);
+    /*stripes on body*/
+    box-shadow: 35px -105px 0 -44px #FFD764, -35px -105px 0 -44px #FFD764, 38px -107px 0 -41px #ffebb1, -32px -107px 0 -41px #ffebb1, 35px -105px 0 -38px #ffca31, -35px -105px 0 -38px #ffca31, 3px -95px 0 -18px #FFD764, 5px -100px 0 -15px #ffebb1, 0px -95px 0 -10px #ffca31, -35px -183px 0 -57px #363636, 35px -183px 0 -57px #363636, -33px -185px 0 -56px #505050, 37px -185px 0 -56px #505050, -35px -184px 0 -54px #292929, 35px -184px 0 -54px #292929;
+    /*antenae nubs*/
+}
+
+.bee-body:after {
+    position: absolute;
+    content: '';
+    background: -webkit-linear-gradient(top, transparent 50%, #363636 50%);
+    background: linear-gradient(to bottom, transparent 50%, #363636 50%);
+    height: 130px;
+    width: 130px;
+    right: 0px;
+    bottom: 0px;
+    background-size: 130px 65px;
+    border-radius: 50%;
+    -webkit-clip-path: ellipse(41% at 51% 48%);
+    clip-path: ellipse(41% at 51% 48%);
+}
+
+.bee-body:before {
+    position: absolute;
+    content: '';
+    background: -webkit-linear-gradient(top, transparent 50%, #434343 50%);
+    background: linear-gradient(to bottom, transparent 50%, #434343 50%);
+    height: 130px;
+    width: 130px;
+    right: 0px;
+    bottom: 0px;
+    background-size: 130px 65px;
+    border-radius: 50%;
+    -webkit-clip-path: ellipse(41% at 61% 48%);
+    clip-path: ellipse(41% at 61% 48%);
+}
+
+.mouth {
+    /*mouth*/
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 55px;
+    bottom: 128px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-bottom: 5px solid #363636;
+}
+
+.antenae {
+    position: relative;
+    z-index: -2;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    right: -75px;
+    bottom: 130px;
+    border: 8px solid #363636;
+    /*right antenae stem*/
+    box-sizing: border-box;
+    border-style: hidden hidden hidden solid;
+    -webkit-transform: skewY(-20deg);
+    transform: skewY(-20deg);
+}
+
+.antenae:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    left: -87px;
+    bottom: 30px;
+    border: 8px solid #363636;
+    /*left antenae stem*/
+    box-sizing: border-box;
+    border-style: hidden solid hidden hidden;
+    -webkit-transform: skewY(40deg);
+    transform: skewY(40deg);
+}
+
+.antenae:after {
+    /*stinger*/
+    -webkit-transform: skewY(20deg);
+    transform: skewY(20deg);
+    position: absolute;
+    content: '';
+    bottom: -213px;
+    left: -33px;
+    width: 30px;
+    height: 30px;
+    background: -webkit-linear-gradient(left, #292929 50%, #363636 50%);
+    background: linear-gradient(to right, #292929 50%, #363636 50%);
+    -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.bee-left {
+    -webkit-animation: flight-left .5s ease-out infinite;
+    animation: flight-left .5s ease-out infinite;
+    content: '';
+    position: absolute;
+    background-color: #F8F8FF;
+    /*large wing left*/
+    height: 100px;
+    width: 150px;
+    bottom: 110px;
+    right: 100px;
+    border-radius: 30px 130px 0 130px;
+    -webkit-transform: skewY(20deg);
+    transform: skewY(20deg);
+    z-index: -1;
+    box-shadow: inset 30px 105px 0 -70px #FFF;
+}
+
+.bee-left:after {
+    -webkit-animation: flight-little .5s ease-in-out infinite;
+    animation: flight-little .5s ease-in-out infinite;
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 110px;
+    top: 70px;
+    left: 48px;
+    background-color: #F0F0F0;
+    /*little wing left*/
+    border-radius: 50% / 50% 0 100% 50%;
+    box-shadow: inset 10px 1px 0px 0px #FFF, inset 30px 7px 0px 0px #f6f6f6;
+}
+
+.bee-right {
+    -webkit-animation: flight-right .5s ease-in-out infinite;
+    animation: flight-right .5s ease-in-out infinite;
+    content: '';
+    position: absolute;
+    background-color: #F8F8FF;
+    /*large wing right*/
+    height: 100px;
+    width: 150px;
+    bottom: 110px;
+    left: 100px;
+    border-radius: 30px 130px 0 130px;
+    border-radius: 130px 30px 130px 0px;
+    -webkit-transform: skewY(-20deg);
+    transform: skewY(-20deg);
+    z-index: -1;
+    box-shadow: inset 30px 105px 0 -70px #FFF;
+}
+
+.bee-right:after {
+    -webkit-animation: flight-little .5s ease-in-out infinite;
+    animation: flight-little .5s ease-in-out infinite;
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 110px;
+    top: 70px;
+    right: 48px;
+    background-color: #F0F0F0;
+    /*little wing right*/
+    border-radius: 50% / 0 50% 50% 100%;
+    box-shadow: inset -10px 1px 0px 0px #FFF, inset -30px 7px 0px 0px #f6f6f6;
+}
+
+.blink {
+    position: relative;
+}
+
+.blink:before {
+    /*left pupil and eyeball shadows*/
+    background-image: -webkit-radial-gradient(71% 38% circle, #ffffff 8%, rgba(0, 0, 0, 0) 8%), -webkit-radial-gradient(65% 50% circle, #363636 16%, rgba(0, 0, 0, 0) 16%), -webkit-radial-gradient(69% 47% circle, #434343 19%, rgba(0, 0, 0, 0) 19%), -webkit-radial-gradient(65% 50% circle, #292929 25%, rgba(0, 0, 0, 0) 25%), -webkit-radial-gradient(50% 55% ellipse, #f8f8ff 50%, rgba(0, 0, 0, 0) 50%), -webkit-radial-gradient(70% 50% circle, #ffffff 65%, rgba(0, 0, 0, 0) 65%);
+    background-image: radial-gradient(circle at 71% 38%, #ffffff 8%, rgba(0, 0, 0, 0) 8%), radial-gradient(circle at 65% 50%, #363636 16%, rgba(0, 0, 0, 0) 16%), radial-gradient(circle at 69% 47%, #434343 19%, rgba(0, 0, 0, 0) 19%), radial-gradient(circle at 65% 50%, #292929 25%, rgba(0, 0, 0, 0) 25%), radial-gradient(ellipse at 50% 55%, #f8f8ff 50%, rgba(0, 0, 0, 0) 50%), radial-gradient(circle at 70% 50%, #ffffff 65%, rgba(0, 0, 0, 0) 65%);
+    left: 2px;
+}
+
+.blink:before,
+.blink:after {
+    -webkit-clip-path: ellipse(50% 20% at 50% 50%);
+    clip-path: ellipse(50% 20% at 50% 50%);
+    content: '';
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background-color: #F0F0F0;
+    top: -67px;
+    -webkit-animation: blink 10s linear infinite;
+    animation: blink 10s linear infinite;
+}
+
+.blink:after {
+    /*right pupil and eyeball shadows*/
+    background-image: -webkit-radial-gradient(41% 38% circle, #ffffff 8%, rgba(0, 0, 0, 0) 8%), -webkit-radial-gradient(35% 50% circle, #363636 16%, rgba(0, 0, 0, 0) 16%), -webkit-radial-gradient(39% 47% circle, #434343 19%, rgba(0, 0, 0, 0) 19%), -webkit-radial-gradient(35% 50% circle, #292929 25%, rgba(0, 0, 0, 0) 25%), -webkit-radial-gradient(50% 55% ellipse, #f8f8ff 50%, rgba(0, 0, 0, 0) 50%), -webkit-radial-gradient(70% 50% circle, #ffffff 65%, rgba(0, 0, 0, 0) 65%);
+    background-image: radial-gradient(circle at 41% 38%, #ffffff 8%, rgba(0, 0, 0, 0) 8%), radial-gradient(circle at 35% 50%, #363636 16%, rgba(0, 0, 0, 0) 16%), radial-gradient(circle at 39% 47%, #434343 19%, rgba(0, 0, 0, 0) 19%), radial-gradient(circle at 35% 50%, #292929 25%, rgba(0, 0, 0, 0) 25%), radial-gradient(ellipse at 50% 55%, #f8f8ff 50%, rgba(0, 0, 0, 0) 50%), radial-gradient(circle at 70% 50%, #ffffff 65%, rgba(0, 0, 0, 0) 65%);
+    left: 73px;
+}
+
+.wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.shadow {
+    height: 45px;
+    width: 170px;
+    border-radius: 50%;
+    background-color: #65a6d4;
+    -webkit-animation: shadow 2s ease-in-out infinite;
+    animation: shadow 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+    }
+
+    9% {
+        -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+    }
+
+    10% {
+        -webkit-clip-path: ellipse(50% 5% at 50% 50%);
+        clip-path: ellipse(50% 5% at 50% 50%);
+    }
+
+    11% {
+        -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+    }
+
+    30% {
+        -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+    }
+
+    31% {
+        -webkit-clip-path: ellipse(50% 5% at 50% 50%);
+        clip-path: ellipse(50% 5% at 50% 50%);
+    }
+
+    32% {
+        -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+    }
+
+    33% {
+        -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+    }
+
+    34% {
+        -webkit-clip-path: ellipse(50% 5% at 50% 50%);
+        clip-path: ellipse(50% 5% at 50% 50%);
+    }
+
+    35% {
+        -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+    }
+
+    50% {
+        -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+    }
+
+    60% {
+        -webkit-clip-path: ellipse(50% 20% at 50% 50%);
+        clip-path: ellipse(50% 20% at 50% 50%);
+    }
+
+    61% {
+        -webkit-clip-path: ellipse(50% 20% at 50% 50%);
+        clip-path: ellipse(50% 20% at 50% 50%);
+    }
+
+    69% {
+        -webkit-clip-path: ellipse(50% 20% at 50% 50%);
+        clip-path: ellipse(50% 20% at 50% 50%);
+    }
+
+    70% {
+        -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+    }
+
+    79% {
+        -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+    }
+
+    80% {
+        -webkit-clip-path: ellipse(50% 5% at 50% 50%);
+        clip-path: ellipse(50% 5% at 50% 50%);
+    }
+
+    81% {
+        -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+    }
+
+    100% {
+        -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+    }
+}
+
+@-webkit-keyframes hover {
+    0% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+
+    50% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+@keyframes hover {
+    0% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+
+    50% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+@-webkit-keyframes shadow {
+    0% {
+        width: 170px;
+    }
+
+    50% {
+        width: 180px;
+    }
+
+    100% {
+        width: 170px;
+    }
+}
+
+@keyframes shadow {
+    0% {
+        width: 170px;
+    }
+
+    50% {
+        width: 180px;
+    }
+
+    100% {
+        width: 170px;
+    }
+}
+
+@-webkit-keyframes flight-left {
+    0% {
+        width: 150px;
+        -webkit-transform: skewY(20deg);
+        transform: skewY(20deg);
+    }
+
+    50% {
+        width: 125px;
+        -webkit-transform: skewY(25deg);
+        transform: skewY(25deg);
+    }
+
+    100% {
+        width: 150px;
+        -webkit-transform: skewY(20deg);
+        transform: skewY(20deg);
+    }
+}
+
+@keyframes flight-left {
+    0% {
+        width: 150px;
+        -webkit-transform: skewY(20deg);
+        transform: skewY(20deg);
+    }
+
+    50% {
+        width: 125px;
+        -webkit-transform: skewY(25deg);
+        transform: skewY(25deg);
+    }
+
+    100% {
+        width: 150px;
+        -webkit-transform: skewY(20deg);
+        transform: skewY(20deg);
+    }
+}
+
+@-webkit-keyframes flight-right {
+    0% {
+        width: 150px;
+        -webkit-transform: skewY(-20deg);
+        transform: skewY(-20deg);
+    }
+
+    50% {
+        width: 125px;
+        -webkit-transform: skewY(-25deg);
+        transform: skewY(-25deg);
+    }
+
+    100% {
+        width: 150px;
+        -webkit-transform: skewY(-20deg);
+        transform: skewY(-20deg);
+    }
+}
+
+@keyframes flight-right {
+    0% {
+        width: 150px;
+        -webkit-transform: skewY(-20deg);
+        transform: skewY(-20deg);
+    }
+
+    50% {
+        width: 125px;
+        -webkit-transform: skewY(-25deg);
+        transform: skewY(-25deg);
+    }
+
+    100% {
+        width: 150px;
+        -webkit-transform: skewY(-20deg);
+        transform: skewY(-20deg);
+    }
+}
+
+@-webkit-keyframes flight-little {
+    0% {
+        height: 110px;
+    }
+
+    50% {
+        height: 100px;
+    }
+
+    100% {
+        height: 110px;
+    }
+}
+
+@keyframes flight-little {
+    0% {
+        height: 110px;
+    }
+
+    50% {
+        height: 100px;
+    }
+
+    100% {
+        height: 110px;
+    }
+}
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="index">
+            <p><span>4</span><span>0</span><span>3</span></p>
+
+        </div>
+        <div class="bee">
+            <div class="bee-body">
+                <div class="blink"></div>
+                <div class="mouth"></div>
+                <div class="antenae"></div>
+                <div class="bee-left"></div>
+                <div class="bee-right"></div>
+            </div>
+
+        </div>
+        <div class="shadow"></div>
+            <p class="tip">请联系管理员哦(´･ω･`)</p>
+
+        <p class="foot">© 2018 403 Error Page | Design by 北京墨迹测试开发团队</p>
+    </div>
+</body>
+
+</html>
